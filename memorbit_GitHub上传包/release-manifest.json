@@ -1,0 +1,11 @@
+{
+  "version": "3.3.7-beta-B08-portfolio",
+  "sourceVersion": "3.3.7-beta-B08",
+  "status": "public-frontend-snapshot",
+  "preparedOn": "2026-10-26",
+  "backendIncluded": false,
+  "defaultProductionEndpointRemoved": true,
+  "userMaterialsIncluded": false,
+  "sourceManifest": "docs/source-release-manifest.json",
+  "verificationBoundary": "The source manifest records historical checks. Their test suites are not included and were not rerun as part of this publication. Current checks are listed in docs/PUBLICATION.md."
+}

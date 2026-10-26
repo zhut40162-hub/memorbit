@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fbf6f2">
+  <meta name="memorbit-release" content="2026.09.15-archive-b06">
+  <meta name="description" content="星迹 Memorbit：根据已有素材整理人设、说话方式和关系记忆，直接导出使用，需要时再定位修订。">
+  <title>星迹 Memorbit · 让共同经历有迹可循</title>
+  <link rel="stylesheet" href="styles.css?v=20260915-efficient-b08">
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">跳到主要内容</a>
+  <div class="ambient" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <div id="siteChrome">
+    <header class="site-header page-width" aria-label="主导航">
+      <a class="brand" href="#top" aria-label="星迹 Memorbit 首页">
+        <img src="assets/brand/memorbit-approved.png?v=20260826-1" alt="星迹 Memorbit">
+      </a>
+      <button class="mobile-menu" id="mobileMenu" type="button" aria-expanded="false" aria-controls="primaryNav"><span></span><span></span></button>
+      <nav class="primary-nav" id="primaryNav" aria-label="网站导航">
+        <a href="#product">产品</a><a href="#how">如何使用</a><a href="#capabilities">核心能力</a><a href="#privacy">隐私与安全</a><a href="#about">关于我们</a>
+      </nav>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换到黑夜模式" aria-pressed="false"><span class="sun" aria-hidden="true">☼</span><span class="toggle-track"><i></i></span><span class="moon" aria-hidden="true">☾</span></button>
+        <button class="text-button" id="loginButton" type="button">登录</button>
+      </div>
+    </header>
+  </div>
+
+  <main id="mainContent">
+    <div id="marketingView">
+      <div class="hero-screen">
+      <section class="hero page-width" id="top" aria-labelledby="heroTitle">
+        <i class="hero-ornament hero-ornament-tr" aria-hidden="true"></i>
+        <i class="hero-ornament hero-ornament-bl" aria-hidden="true"></i>
+        <i class="hero-ornament hero-ornament-br" aria-hidden="true"></i>
+        <div class="hero-copy">
+          <p class="eyebrow">给你和你的 AI 伴侣</p>
+          <h1 id="heroTitle"><span>把共同经历与相处方式，</span><em>整理成可以带走的<br class="mobile-title-break">关系记忆</em></h1>
+          <div class="title-divider" aria-hidden="true"><i></i><b>✦</b><i></i></div>
+          <p class="hero-description">从已有聊天和资料中整理人设、说话方式与共同经历，先得到可以带走的档案。不用先答长问卷；使用后觉得哪里不准，再找到那条记忆修订。</p>
+          <div class="hero-actions">
+            <button class="button primary" type="button" data-start-workflow>开始整理</button>
+            <a class="button link" href="#starMapDemo">查看示例星图 <span aria-hidden="true">↗</span></a>
+          </div>
+          <ul class="trust-list" aria-label="产品原则"><li>有据先存</li><li>按需修订</li><li>保留出处</li><li>导出带走</li></ul>
+        </div>
+
+        <div class="archive-stage" aria-label="关系记忆档案与星图示意">
+          <div class="paper-shadow" aria-hidden="true"></div>
+          <div class="paper-layer layer-back" aria-hidden="true"></div>
+          <div class="paper-layer layer-mid" aria-hidden="true"></div>
+          <div class="star-disc" aria-hidden="true">
+            <svg viewBox="0 0 360 360" role="presentation">
+              <defs>
+                <radialGradient id="discGlow"><stop offset="0" stop-color="#fffaf7"/><stop offset=".55" stop-color="#f8e4e7"/><stop offset="1" stop-color="#e8c6cf" stop-opacity=".48"/></radialGradient>
+                <linearGradient id="needleGlow" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#c78a73"/><stop offset="1" stop-color="#d9a2ad"/></linearGradient>
+              </defs>
+              <circle class="disc-halo" cx="180" cy="180" r="168" fill="url(#discGlow)"/>
+              <g class="disc-rings" fill="none"><circle cx="180" cy="180" r="151"/><circle cx="180" cy="180" r="134"/><circle cx="180" cy="180" r="98"/><circle cx="180" cy="180" r="48"/></g>
+              <g class="disc-ticks"><path d="M180 24v18M180 318v18M24 180h18M318 180h18"/><path d="M76 76l13 13M271 271l13 13M284 76l-13 13M89 271l-13 13"/></g>
+              <g class="disc-petals" fill="none"><path d="M180 53C203 91 205 136 180 180C155 136 157 91 180 53Z"/><path d="M180 53C203 91 205 136 180 180C155 136 157 91 180 53Z" transform="rotate(45 180 180)"/><path d="M180 53C203 91 205 136 180 180C155 136 157 91 180 53Z" transform="rotate(90 180 180)"/><path d="M180 53C203 91 205 136 180 180C155 136 157 91 180 53Z" transform="rotate(135 180 180)"/></g>
+              <g class="disc-rose"><path d="M180 83l18 79 79 18-79 18-18 79-18-79-79-18 79-18Z"/><path d="M180 127l13 40 40 13-40 13-13 40-13-40-40-13 40-13Z"/></g>
+              <circle class="disc-core" cx="180" cy="180" r="18"/><circle class="disc-core-dot" cx="180" cy="180" r="5"/>
+              <path class="disc-needle" d="M180 72l12 98-12 10-12-10Z" fill="url(#needleGlow)"/><path class="disc-needle-tail" d="M180 288l-9-98 9-10 9 10Z"/>
+              <g class="disc-cardinals"><text x="180" y="34">N</text><text x="180" y="340">S</text><text x="326" y="185">E</text><text x="34" y="185">W</text></g>
+              <text class="disc-label" x="180" y="311">关系星盘 · RELATIONSHIP COMPASS</text>
+            </svg>
+            <span class="star-disc-title">关系星盘<small>RELATIONSHIP COMPASS</small></span>
+          </div>
+          <article class="archive-card card-memories"><small>MEMORIES</small><h3>共同经历</h3><div class="memory-line"><span>第一次旅行</span><time>2024.04.12</time><i class="memory-thumb thumb-trip" aria-hidden="true"></i></div><div class="memory-line"><span>深夜长谈</span><time>2025.06.02</time><i class="memory-thumb thumb-night" aria-hidden="true"></i></div></article>
+          <article class="archive-card card-style"><small>INTERACTION STYLE</small><h3>相处方式</h3><dl><div><dt>沟通偏好</dt><dd><i style="--fill:74%"></i></dd></div><div><dt>表达方式</dt><dd><i style="--fill:58%"></i></dd></div><div><dt>冲突处理</dt><dd><i style="--fill:66%"></i></dd></div><div><dt>陪伴需求</dt><dd><i style="--fill:82%"></i></dd></div></dl></article>
+          <article class="archive-card card-points"><small>KEY POINTS</small><h3>不能弄丢的事</h3><ul><li>重视承诺与安全感</li><li>喜欢有计划的惊喜</li><li>压力下需要被接住</li><li>对细节有记忆点</li></ul></article>
+          <article class="archive-card card-orbit"><small>SHARED ORBIT</small><svg viewBox="0 0 170 90" aria-label="两颗星沿共同轨道运行"><ellipse cx="85" cy="46" rx="62" ry="25"/><ellipse cx="85" cy="46" rx="38" ry="38" transform="rotate(66 85 46)"/><circle cx="62" cy="40" r="6"/><circle cx="110" cy="51" r="5"/></svg><p>共 <strong>327</strong> 个记忆节点</p></article>
+          <div class="archive-clip" aria-hidden="true"></div>
+          <div class="archive-seal" aria-hidden="true">
+            <i class="seal-ribbon"></i>
+            <svg viewBox="0 0 80 80" role="presentation">
+              <circle class="seal-ring" cx="40" cy="40" r="32"/>
+              <ellipse class="seal-orbit" cx="40" cy="40" rx="25" ry="10"/>
+              <ellipse class="seal-orbit" cx="40" cy="40" rx="25" ry="10" transform="rotate(60 40 40)"/>
+              <ellipse class="seal-orbit" cx="40" cy="40" rx="25" ry="10" transform="rotate(120 40 40)"/>
+              <path class="seal-star" d="M40 26c2.6 8 4.8 10.2 13 13-8.2 2.8-10.4 5-13 13-2.7-8-4.9-10.2-13-13 8.1-2.8 10.3-5 13-13Z"/>
+              <circle class="seal-dot" cx="19" cy="35" r="2"/><circle class="seal-dot" cx="60" cy="45" r="2"/><circle class="seal-dot" cx="46" cy="18" r="1.5"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="process-rail page-width" aria-label="四步使用流程">
+        <i class="rail-ornament rail-ornament-tl" aria-hidden="true"></i>
+        <i class="rail-ornament rail-ornament-tr" aria-hidden="true"></i>
+        <i class="rail-ornament rail-ornament-bl" aria-hidden="true"></i>
+        <i class="rail-ornament rail-ornament-br" aria-hidden="true"></i>
+        <button type="button" data-start-workflow><i class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4.25" y="5.25" width="15.5" height="13.5" rx="1.5"/><circle cx="9" cy="10" r="1.5"/><path d="m6.5 16 3.5-3.5 2.7 2.7 2.2-2.2 2.6 3"/></svg></i><span class="step-copy"><span class="step-number">01</span><strong>提供材料</strong><small>聊天文字、已有资料与关键重点</small></span></button><span class="rail-link" aria-hidden="true">✦</span>
+        <button type="button" data-start-workflow><i class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="5.25"/><path d="m14.4 14.4 4.35 4.35"/></svg></i><span class="step-copy"><span class="step-number">02</span><strong>智能整理</strong><small>有据先存，不必先答问卷</small></span></button><span class="rail-link" aria-hidden="true">✦</span>
+        <button type="button" data-start-workflow><i class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3.8c.65 4.45 3.15 6.95 7.6 7.6-4.45.65-6.95 3.15-7.6 7.6-.65-4.45-3.15-6.95-7.6-7.6 4.45-.65 6.95-3.15 7.6-7.6Z"/><path d="M18.8 4.2v2.6m-1.3-1.3h2.6"/></svg></i><span class="step-copy"><span class="step-number">03</span><strong>生成星图</strong><small>看见共同经历与相处方式的连接</small></span></button><span class="rail-link" aria-hidden="true">✦</span>
+        <button type="button" data-start-workflow><i class="step-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4.5 7.5h6l1.5 2h7.5v8.75a1.5 1.5 0 0 1-1.5 1.5H6a1.5 1.5 0 0 1-1.5-1.5Z"/><path d="M12 11.5v5m-2-2 2 2 2-2"/></svg></i><span class="step-copy"><span class="step-number">04</span><strong>导出带走</strong><small>下载可读档案与结构化文件</small></span></button>
+      </section>
+      </div>
+
+      <section class="story-section page-width" id="product">
+        <div class="section-heading"><p class="eyebrow">不是聊天记录的仓库</p><h2>真正该带走的，是他为什么还是“他”</h2><p>聊天记录告诉你们说过什么；关系记忆还要留下你们怎样理解彼此、怎样和好、怎样称呼，以及哪些边界不能被覆盖。</p></div>
+        <div class="comparison-grid"><article><span class="card-index">01</span><h3>AI 先理解并整理</h3><p>关系、人设、进展、相处方式和边界由模型先综合整理，不把分类工作交给用户。</p></article><article><span class="card-index">02</span><h3>先使用，按需修订</h3><p>大体准确就直接继续；发现说反、遗漏或边界不对时，再修改或补充材料。</p></article><article><span class="card-index">03</span><h3>关系可以被看见</h3><p>零散的事件与习惯，在星图里成为可探索的关联，而不是一列冷冰冰的数据。</p></article></div>
+      </section>
+
+      <section class="map-showcase" id="starMapDemo"><div class="page-width map-layout">
+        <div class="map-copy"><p class="eyebrow">RELATIONSHIP CONSTELLATION</p><h2>打开星图，看见你们的记忆世界</h2><p>中心是用户和他的 AI 伴侣，周围的星群来自共同经历、相处方式、偏好、长期设定和边界。点击节点，就能看到对应内容与原文依据。</p><button class="button secondary" type="button" data-start-workflow>生成我的星图</button></div>
+        <div class="map-window" data-map-kind="demo"><div class="map-toolbar"><span><i></i> 示例星图</span><div><button type="button" data-demo-zoom="out" aria-label="缩小">−</button><button type="button" data-demo-zoom="in" aria-label="放大">＋</button><button type="button" data-demo-zoom="reset" aria-label="重置视图">⌂</button></div></div><div class="star-map" id="demoMap" aria-label="示例关系星图"></div><div class="map-legend"><span><i class="legend-user"></i>用户</span><span><i class="legend-companion"></i>AI 伴侣</span><span><i class="legend-memory"></i>记忆星群</span></div></div>
+      </div></section>
+
+      <section class="steps-section page-width" id="how"><div class="section-heading compact"><p class="eyebrow">HOW IT WORKS</p><h2>整理这件事，不必再从空白开始</h2></div><ol class="detail-steps">
+        <li><span>01</span><div><h3>提供材料</h3><p>粘贴或导入聊天材料后，先确认材料里的姓名分别是谁；只有单独上传的聊天截图需要说明消息通常在左侧还是右侧，不必先替系统总结。</p></div></li>
+        <li><span>02</span><div><h3>获得整理结果</h3><p>千问根据已有素材整理关系、人设、经历和表达方式；零碎但有依据的内容也会保留，不要求先回答问卷。</p></div></li>
+        <li><span>03</span><div><h3>按需查看与修订</h3><p>列表和星图连接同一份档案。需要纠错时，找到具体条目，查看依据、适用人物和阶段，再修改。</p></div></li>
+        <li><span>04</span><div><h3>导出带走</h3><p>导出可读 Markdown、结构化 JSON 和重新对齐提示词，在目标平台中实际复测。</p></div></li>
+      </ol></section>
+
+      <section class="capability-section" id="capabilities"><div class="page-width"><div class="section-heading"><p class="eyebrow">CORE CAPABILITIES</p><h2>美观之外，每一个细节都有实际作用</h2></div><div class="capability-grid">
+        <article><i aria-hidden="true">✦</i><h3>AI 主动整理</h3><p>只在你确认并点击整理后，将所选文字与截图发送给千问模型理解、总结和分类。</p></article><article><i aria-hidden="true">◎</i><h3>可选定点修订</h3><p>可靠内容自动纳入，缺证据或有冲突的内容单独提示；隐藏分类不会卡住流程。</p></article><article><i aria-hidden="true">⌁</i><h3>关系星图</h3><p>不规则聚类呈现记忆之间的联系，并支持缩放、筛选与查看详情。</p></article><article><i aria-hidden="true">⇩</i><h3>开放导出</h3><p>不是锁在产品里的“纪念品”，而是可阅读、可编辑、可再次导入的文件。</p></article>
+      </div></div></section>
+
+      <section class="privacy-section page-width" id="privacy"><div class="privacy-card"><div><p class="eyebrow">PRIVACY BY DESIGN</p><h2>先让你掌控材料，再谈“替你记得”</h2></div><ul><li><strong>提交前由你决定</strong><span>智能整理和明确的 AI 补充操作会向模型服务提交材料，定点手动修订不需要调用 AI。</span></li><li><strong>不确定就标出来</strong><span>材料没说过的内容不应被补造，补充背景不等于确认所有事实。</span></li><li><strong>本机草稿不代替备份</strong><span>浏览器草稿不等于账号云端保存；请查看保存状态并下载项目备份。</span></li><li><strong>只用有权使用的材料</strong><span>请先脱敏，并取得相关人的同意；原文件和截图请另行保管。</span></li></ul></div></section>
+      <section class="about-section page-width" id="about"><div class="final-cta"><span class="orbit-mark" aria-hidden="true">✦</span><p class="eyebrow">星迹 Memorbit</p><h2>让你们的共同经历，有迹可循。</h2><p>星迹不能保证任何模型永不遗忘，也不能复刻一个完整的“他”；星迹能做的，是把重要关系记忆整理清楚，在需要时为重新对齐提供依据。</p><button class="button primary" type="button" data-start-workflow>开始整理</button></div></section>
+    </div>
+
+    <section id="workspaceView" class="workspace" hidden aria-label="星迹关系记忆整理工作台">
+      <header class="workspace-header"><button class="brand workspace-brand" id="backHome" type="button" aria-label="返回星迹首页"><img src="assets/brand/memorbit-approved.png?v=20260826-1" alt="星迹 Memorbit"></button><div class="workspace-actions"><button class="theme-toggle" type="button" data-theme-toggle aria-label="切换到黑夜模式" aria-pressed="false"><span class="sun" aria-hidden="true">☼</span><span class="toggle-track"><i></i></span><span class="moon" aria-hidden="true">☾</span></button><button class="text-button" id="workspaceLogin" type="button">登录</button></div></header>
+      <div class="workspace-body">
+        <nav class="workflow-progress" id="workflowProgress" aria-label="整理进度"><button class="active" type="button" data-stage-nav="1"><span>01</span><strong>提供材料</strong><small>已有聊天与背景</small></button><i aria-hidden="true"></i><button type="button" data-stage-nav="2" disabled><span>02</span><strong>整理结果</strong><small>有依据的直接保留</small></button><i aria-hidden="true"></i><button type="button" data-stage-nav="3" disabled><span>03</span><strong>可用档案</strong><small>按需查看或修订</small></button><i aria-hidden="true"></i><button type="button" data-stage-nav="4" disabled><span>04</span><strong>导出使用</strong><small>保留主档并实际复测</small></button></nav>
+        <aside class="archive-save-bar" aria-label="档案保存提醒"><p id="archiveSaveStatus" role="status" aria-live="polite">本机草稿保存状态将在整理或导入档案后显示。</p><small>浏览器可能清理草稿；项目备份用于以后继续修订，原文件与截图请另外保存。</small></aside>
+
+        <div class="workflow-panel active" data-stage="1">
+          <div class="panel-heading"><div><p class="eyebrow">STEP 01 · SOURCE</p><h2>先给星迹一些有代表性的材料</h2><p>聊天文字、TXT、Markdown、JSON、Word 正文与内嵌图片，以及单独上传的聊天截图，都会统一进入同一次智能整理。选择能说明关系、重要经历和相处方式的片段即可。</p></div><div class="local-badge"><span>◉</span><strong>智能整理</strong><small>确认人物后再提交</small></div></div>
+          <div class="material-layout"><section class="workspace-card material-card">
+            <div class="card-title"><h3>聊天与多格式材料</h3><span id="materialCount">0 字</span></div>
+            <textarea id="materialText" rows="14" placeholder="粘贴聊天记录，或统一导入 TXT / Markdown / JSON / Word（.docx）材料……"></textarea>
+            <aside class="material-context-tip"><p>已有聊天、截图、人设或背景资料都可以直接提供，不用先整理；方便的话补一句“谁是谁、发生在哪个阶段”，并标出最想保留的片段。</p><p>角色扮演可注明用户扮演谁、谁是其他角色；不知道的留空即可。整理时所选内容会发送到模型服务，请先去掉无关隐私，并另存原文件与截图。</p></aside>
+            <div class="file-actions"><label class="button quiet">导入聊天文件<input id="textFiles" type="file" accept=".txt,.md,.markdown,.json,.docx,text/plain,text/markdown,application/json,application/vnd.openxmlformats-officedocument.wordprocessingml.document" multiple hidden></label><label class="button quiet">添加聊天截图<input id="imageFiles" type="file" accept="image/png,image/jpeg,image/webp" multiple hidden></label><button class="button quiet" id="loadDemo" type="button">填入示例</button><button class="button text-danger" id="clearMaterial" type="button">清空</button></div>
+            <div class="file-list" id="fileList"></div>
+            <p class="document-import-status" id="documentImportStatus" aria-live="polite"></p>
+            <div class="image-list" id="imageList"></div>
+
+            <section class="source-identity" id="identityConfirmation" data-identity-confirmation aria-labelledby="sourceIdentityTitle">
+              <div class="source-identity-heading">
+                <div><span>整理前先确认</span><h4 id="sourceIdentityTitle">Word 或文字里，谁是 AI 伴侣，谁是用户？</h4></div>
+                <p id="identityStatus" role="status" aria-live="polite" aria-atomic="true">导入后，星迹会列出材料中可能的姓名或称呼；你确认对应关系即可。</p>
+              </div>
+              <p class="identity-explanation">例如材料反复出现“角色甲：”“角色乙：”，这里用于确认姓名对应，不再依靠聊天气泡左右位置猜人物。</p>
+              <datalist id="detectedSpeakers"></datalist>
+              <div class="identity-fields">
+                <label><span>AI 伴侣的姓名或称呼</span><input id="sourceCompanionName" data-identity-role="companion" type="text" list="detectedSpeakers" maxlength="40" autocomplete="off" placeholder="例如：角色甲"></label>
+                <label><span>用户的姓名或称呼</span><input id="sourceUserName" data-identity-role="user" type="text" list="detectedSpeakers" maxlength="40" autocomplete="off" placeholder="例如：角色乙"></label>
+              </div>
+              <label class="identity-unknown"><input id="identityUnknown" type="checkbox"><span><strong>这份材料确实无法分清人物</strong><small>保持人物未知，不让 AI 猜测；你仍然可以继续智能整理，并在结果页补充。</small></span></label>
+              <div class="identity-actions"><button class="button quiet" id="swapIdentity" type="button">交换双方</button><button class="button secondary" id="confirmIdentity" data-action="confirm-identity" type="button">确认人物对应</button></div>
+              <div class="screenshot-side-rule"><div><strong>单独上传的聊天截图</strong><p>下面的左右选项只作用于聊天截图；Word 和文字中的姓名，以你上面确认的对应关系为准。</p></div><label class="speaker-side">我的消息通常在<select id="speakerSide"><option value="right" selected>右侧</option><option value="left">左侧</option><option value="unknown">不确定</option></select></label></div>
+            </section>
+
+            <p class="field-note">TXT、Markdown、结构化 JSON、Word 正文与内嵌 PNG/JPG/WebP 会统一保留来源；PDF 和老式 `.doc` 当前不会被当作聊天误读，请先转为上述格式。图片合计最多 20 张、每张不超过 4 MB，文档图片会留在原聊天位置并先区分聊天截图、表情包、资料图和装饰图。</p>
+          </section>
+            <aside class="workspace-card anchor-card auto-analysis-card"><div class="card-title"><div><h3>交给千问智能整理</h3><p>你只需要提供原始文字或聊天截图，不必先替系统总结。</p></div></div><div class="auto-analysis-list"><article><span>01</span><div><strong>识别关系与称呼</strong><small>从材料中寻找双方身份、关系变化与专属称呼。</small></div></article><article><span>02</span><div><strong>提取经历与进展</strong><small>保留重要事件、关系阶段、结果与原文依据。</small></div></article><article><span>03</span><div><strong>整理伴侣信息和用户边界</strong><small>识别人设、语气、安慰方式、偏好与明确禁区。</small></div></article><article><span>04</span><div><strong>AI 自己完成分类取舍</strong><small>有依据的自动纳入，拿不准的自动暂不纳入，不把分类工作交给用户。</small></div></article></div><p class="auto-analysis-note">下一步直接查看整理结果并导出；需要纠错时再修订，不要求先确认关系核心。</p><div hidden aria-hidden="true"><textarea id="anchorRelation"></textarea><textarea id="anchorEvent"></textarea><textarea id="anchorBoundary"></textarea></div><div class="import-box"><strong>已有星迹档案？</strong><span>导入结构化 JSON，继续修改。</span><label class="button quiet">导入档案<input id="archiveFile" type="file" accept=".json,application/json" hidden></label><small id="archiveImportStatus"></small></div></aside></div>
+          <p class="large-file-help">聊天文本每个文件支持至 12 MiB（可导入 10 MB 文件）；全文按段整理，不是一次塞给模型。QQ 导出的图片文件名只代表引用，没有原图就不猜图片内容。</p>
+          <div id="largeTextControls" class="workspace-card large-text-controls" hidden>
+            <div class="large-controls-heading"><h3>长文持续整理</h3><p>默认持续处理全部剩余段，开始前仍需确认模型调用与费用；大文件可能产生数百或数千次请求。想先检查人物与整理效果，也可以先处理 20 次。</p></div>
+            <div class="large-options-grid">
+              <div class="large-option-field"><label for="largeBatchSize">本次处理范围</label><select id="largeBatchSize" aria-describedby="largeBudgetHelp"><option value="all" selected>持续处理全部剩余段</option><option value="20">20 次请求后暂停</option><option value="100">100 次请求后暂停</option></select><small id="largeBudgetHelp">次数上限包含失败重试；费用按实际用量计。</small></div>
+              <div class="large-option-field"><label for="largeConcurrency">同时处理的段数</label><select id="largeConcurrency" aria-describedby="largeConcurrencyHelp"><option value="1">1 段，依次处理</option><option value="2" selected>2 段，并行处理</option></select><small id="largeConcurrencyHelp">并行仅减少等待，不保证节省费用。</small></div>
+              <div class="large-option-field"><label for="largeChunkSize">新任务每段上限</label><select id="largeChunkSize" aria-describedby="largeChunkHelp"><option value="3200">3,200 字符，较短分段</option><option value="6400" selected>6,400 字符，较长分段</option></select><small id="largeChunkHelp">仅新任务生效；旧任务沿用原分段，已成功段不重跑。</small></div>
+            </div>
+            <p id="largeEfficiencyStatus" class="large-efficiency-status" role="status" aria-live="polite" aria-atomic="true">导入材料后显示分段与处理安排；预计请求数不代表费用或质量保证。</p>
+            <p class="large-run-note">持续处理需保持页面打开，可随时暂停。成功段保存到当前浏览器；清理浏览器数据仍会丢失，请另存原材料并下载进度备份。</p>
+            <p id="largeProgress" role="status" aria-live="polite">长文将自动分段，尚未开始。</p><button class="button quiet" id="downloadLargeProgress" type="button" disabled>下载长文进度备份</button>
+          </div>
+          <p id="largeResumeStatus" role="status"></p><button class="button quiet" id="resumeLargeJob" type="button" hidden>恢复上次长文任务（不自动调用 AI）</button>
+          <button class="button quiet" id="restoreLargeArchiveDraft" type="button" hidden>恢复本机大档案草稿（含人工修订）</button>
+          <div class="panel-footer"><p id="materialReady" class="ready-note" role="status" aria-live="polite" aria-atomic="true">输入至少 20 个字，或添加一张聊天截图后即可智能整理。</p><button class="button quiet" id="cancelExtract" type="button" hidden>暂停整理（保留已完成进度）</button><button class="button primary" id="extract" type="button" disabled>整理记忆线索 <span aria-hidden="true">→</span></button></div>
+        </div>
+
+        <div class="workflow-panel" data-stage="2">
+          <div class="panel-heading"><div><p class="eyebrow">STEP 02 · RESULT</p><h2>整理好的档案内容</h2><p>先看整体是否像你们。大体准确就直接继续；发现说反、遗漏或边界不对时，在本页补充或修改即可。</p></div><div class="review-summary"><span><strong id="candidateCount">0</strong>条档案内容</span><span><strong id="attentionCount">0</strong>条可补充</span><span><strong id="confirmedCount">0</strong>条已纳入</span></div></div>
+          <section id="conversationOverview" class="workspace-card conversation-overview" aria-label="聊天内容整体总结"></section>
+          <section class="workspace-card quick-supplement" id="quickSupplement" aria-labelledby="quickSupplementTitle">
+            <div class="quick-supplement-heading"><div><p class="eyebrow">直接补充</p><h3 id="quickSupplementTitle">有遗漏？在这里告诉星迹</h3><p>不用返回上一步，也不用重新上传材料。名字会直接保存；其他补充由 AI 结合原聊天重新归纳。</p></div><span>可选</span></div>
+            <div class="supplement-grid"><label><span>AI 伴侣怎么称呼</span><input id="companionNameInput" maxlength="40" autocomplete="off" placeholder="例如：角色名称或常用称呼"></label><label><span>还漏了什么</span><textarea id="supplementText" rows="3" maxlength="4000" placeholder="例如：我们现在是稳定伴侣；我难过时希望他先陪伴，不要马上讲道理……"></textarea></label></div>
+            <div class="supplement-actions"><p id="supplementStatus" class="ready-note" aria-live="polite">可以补充伴侣是谁、称呼、关系进度、相处感觉、重要经历或用户边界。</p><button class="button primary small" id="mergeSupplement" type="button">保存并更新档案</button></div>
+          </section>
+          <section id="relationshipInference" class="workspace-card relationship-inference" aria-label="关系与相处方式推断"></section>
+          <details class="workspace-card memory-evidence-details" id="memoryEvidenceDetails"><summary><div><strong>可选：查看具体记忆和原文</strong><span>需要回查或修订时再打开，不影响直接导出</span></div><small><b id="memoryIncludedCount">0</b> 条已保留 · <b id="memoryOmittedCount">0</b> 条线索留存</small></summary><div class="memory-evidence-body"><div class="evidence-howto"><strong>这一区怎么用</strong><ol><li><b>暂时不确定：</b>线索已经留存，不作为事实导出，也不需要逐条处理。</li><li><b>你知道内容属实：</b>可以确认后纳入，无需为了保留先改写。</li><li><b>发现记录有误：</b>只修改那一条；补充背景不等于确认整组事实。</li></ol></div><div class="review-toolbar simplified-toolbar"><div class="review-filter-tabs" role="tablist" aria-label="记忆纳入状态"><button type="button" data-review-filter="pending">留存线索</button><button class="active" type="button" data-review-filter="all">全部</button><button type="button" data-review-filter="confirmed">已保留</button></div><button class="button quiet" id="addMemory" type="button">＋ 直接补充遗漏</button><div hidden aria-hidden="true"><select id="filterType"><option value="all">全部分区</option></select><select id="filterPriority"><option value="all">全部</option></select><select id="filterAttention"><option value="all">全部</option></select><button id="confirmAllRoutine" type="button"></button><button id="mergeSelected" type="button"></button></div></div><div id="reviewList" class="review-list"></div></div></details>
+          <div class="panel-footer"><button class="button link" type="button" data-go-stage="1">← 返回材料</button><p id="reviewReady" class="ready-note">有依据的内容先整理好，不必答问卷；可直接查看档案并导出。</p><button class="button quiet" id="toParticipantReview" type="button">可选：生成修订页</button><button class="button primary" id="generateMap" type="button" disabled>查看可用档案 <span aria-hidden="true">→</span></button></div>
+        </div>
+
+        <div class="workflow-panel" data-stage="3">
+          <div class="panel-heading"><div><p class="eyebrow">STEP 03 · YOUR ARCHIVE</p><h2>档案可以先用，也可以随时回来修订</h2><p>人设、说话方式和共同经历保留各自的依据。直接导出即可；要调整某一处，再搜索具体条目，不用重新填问卷。</p></div><div class="map-count"><strong id="mapMemoryCount">0</strong><span>已纳入记忆</span></div></div>
+          <section class="relationship-profile workspace-card" id="relationshipProfile" aria-label="关系档案摘要"></section>
+          <details class="workspace-card archive-actors"><summary>人物与角色 <span>可选 · 不必先填写</span></summary><p>用户本人、用户扮演的角色和其他 NPC 分开记录。同名人物可以属于不同故事；没有资料时保持未知，不凭称呼猜关系。</p><div id="archiveActorList" class="archive-actor-list" aria-label="已登记人物"></div><div class="archive-actor-fields"><label for="archiveActorName">姓名或称呼<input id="archiveActorName" type="text" maxlength="80" autocomplete="off" placeholder="例如：角色乙"></label><label for="archiveActorKind">人物类型<select id="archiveActorKind"><option value="unknown">暂不确定</option><option value="user_character">用户扮演的角色</option><option value="npc">其他角色 / NPC</option></select></label><label for="archiveActorWorld">所属故事或世界<input id="archiveActorWorld" type="text" maxlength="120" placeholder="可留空；用于区分不同故事"></label><button class="button quiet" id="archiveActorAdd" type="button">添加人物</button></div></details>
+          <section class="workspace-card archive-browser" aria-labelledby="archiveBrowserTitle">
+            <div class="archive-browser-head"><div><p class="eyebrow">查看与修订 · 可选</p><h3 id="archiveBrowserTitle">找到那一条记忆</h3><p>搜索名称、内容或人物，查看原文和适用场景后按需修改。暂未采用的线索也会留存，不必逐条处理。</p></div><span id="archiveListCount" role="status" aria-live="polite">尚未载入条目</span></div>
+            <label class="archive-search-label" for="archiveSearch">搜索档案内容</label><input id="archiveSearch" type="search" placeholder="例如：称呼、第一次见面、某位角色……" autocomplete="off" aria-controls="archiveList">
+            <div class="archive-list" id="archiveList" role="list"><p class="archive-empty">整理或导入档案后，这里会显示可查找的记忆。</p></div><div class="archive-pager" id="archivePager"></div>
+          </section>
+          <details class="graph-details workspace-card" id="graphDetails"><summary>查看记忆证据网络 <span>辅助核错 · 只显示已纳入内容</span></summary><div class="graph-intro">星图不是亲密度评分。它帮助你检查每条记忆属于用户、AI 伴侣还是双方，以及关系、人设、经历和相处方式之间有没有串错。</div><div class="generated-map-layout"><section class="map-window generated-window"><div class="map-toolbar"><div class="map-filters" id="mapFilters"></div><div><button type="button" id="mapZoomOut" aria-label="缩小">−</button><button type="button" id="mapZoomIn" aria-label="放大">＋</button><button type="button" id="mapReset" aria-label="重置视图">⌂</button></div></div><div class="star-map" id="generatedMap" aria-label="生成的关系记忆证据网络"></div><div class="map-legend"><span><i class="legend-user"></i><b id="userMapName">用户</b></span><span><i class="legend-companion"></i><b id="companionMapName">AI 伴侣</b></span><span><i class="legend-memory"></i>点击星点核对出处</span></div></section><aside class="workspace-card map-detail" id="mapDetail" aria-live="polite"><div class="empty-detail"><span>✦</span><h3>选择一颗记忆星</h3><p>这里会显示人物归属、内容和原文依据。</p></div></aside></div></details>
+          <details class="workspace-card archive-history"><summary>查看修订历史 <span>按需回看，恢复前请核对影响</span></summary><p>历史用于检查本档案的修改。恢复旧内容后需要重新导出；已交给其他平台的旧文件不会自动同步。</p><div id="archiveRevisionList"><p class="archive-empty">这份档案暂时没有修订记录。</p></div></details>
+          <div class="panel-footer"><button class="button link" type="button" data-go-stage="2">← 返回整理结果</button><p class="ready-note ok">无需先处理全部线索，即可导出当前可用内容。</p><button class="button primary" id="toExport" type="button">导出使用 <span aria-hidden="true">→</span></button></div>
+        </div>
+
+        <div class="workflow-panel" data-stage="4">
+          <div class="panel-heading"><div><p class="eyebrow">STEP 04 · EXPORT</p><h2>把熟悉的关系和相处感觉一起带走</h2><p>档案会先写明关系与相处协议，再带入人设和关键记忆；重新对齐提示词会要求目标模型先复述、后使用、遇到不确定先询问。</p></div><div class="export-stats"><span><strong id="finalCount">0</strong>已纳入</span><span><strong id="finalCore">0</strong>核心记忆</span><span><strong id="finalEvidence">0</strong>原文依据</span></div></div>
+          <section class="workspace-card export-coverage-card" aria-labelledby="exportCoverageTitle"><h3 id="exportCoverageTitle">主档保存范围，与本次带入范围分开看</h3><div id="exportCoverage" class="export-coverage" role="status" aria-live="polite">导出会根据文件类型说明可用条目与范围。平台专用内容可能有限量，不代表其余记忆从主档消失。</div><p>项目备份用于继续修订，不等于原始文件备份；请另存原文件与截图。更换导出文件后，也需在目标平台替换旧版本并复测。</p></section>
+          <section class="workspace-card migration-planner" aria-labelledby="migrationPlannerTitle"><div class="migration-planner-head"><div><p class="eyebrow">先选目标，不用懂文件格式</p><h3 id="migrationPlannerTitle">你想在新平台恢复哪一部分？</h3><p>拿不准就选“完整迁移”。星迹会把角色设定和关系记忆分成两份，避免混在一起后人物、经历或语气串错。</p></div><span class="storage-pill">当前无账号档案库</span></div><div class="migration-scope" role="group" aria-label="迁移内容选择"><button type="button" data-migration-scope="character" aria-pressed="false"><strong>只恢复角色</strong><span>TA 是谁、怎么说话</span></button><button type="button" data-migration-scope="memory" aria-pressed="false"><strong>只恢复经历</strong><span>发生过什么、有哪些边界</span></button><button class="active" type="button" data-migration-scope="both" aria-pressed="true"><b>推荐</b><strong>完整迁移</strong><span>角色卡 + 记忆库</span></button></div><div class="migration-advice" id="migrationAdvice" aria-live="polite"></div><div class="migration-files"><article data-migration-file="character"><span data-file-badge>这次需要</span><div><small>角色卡 V2 JSON</small><h4>决定“TA 是谁、怎么说话”</h4><p>包含已采用的人设、表达特点与适用场景，不把未确定线索写成事实；源文件另行保管。</p></div><button class="button quiet small" type="button" data-portable-download="character">下载角色卡</button></article><article data-migration-file="memory"><span data-file-badge>这次需要</span><div><small>记忆库 JSON</small><h4>保存“你们发生过什么”</h4><p>只包含已纳入且当前有效的关系进展、共同经历、用户边界和记忆条目。</p></div><button class="button quiet small" type="button" data-portable-download="memory">下载记忆库</button></article></div><aside class="storage-status"><strong>现在有没有数据库？</strong><p><b>没有长期保存完整关系档案的账号数据库。</b>本机草稿是否保存成功，请以上方状态为准；“星迹项目备份 JSON”用于继续编辑，不能代替原文件和截图备份。另有可独立部署的核对结果库，只保存脱敏判断、修改、备注和重要标记，不保存原聊天。</p></aside></section>
+          <div class="export-layout"><nav class="export-tabs" aria-label="导出内容"><button class="active" type="button" data-export-tab="readable">可读档案</button><button type="button" data-export-tab="rolecard">角色卡</button><button type="button" data-export-tab="memory">记忆库</button><button type="button" data-export-tab="structured">星迹备份</button><button type="button" data-export-tab="review">可选修订</button><button type="button" data-export-tab="prompt">重新对齐提示</button><button type="button" data-export-tab="platform">平台教程</button><button type="button" data-export-tab="test">适配测试</button></nav><div class="workspace-card export-content">
+            <section class="export-panel active" data-export-panel="readable"><div class="export-head"><div><h3>星迹关系记忆 · 可读版</h3><p>适合自己保存、回顾与继续编辑。</p></div><div><button class="button quiet" type="button" data-copy-target="mdPreview">复制</button><button class="button primary small" id="downloadMd" type="button">下载 Markdown</button></div></div><pre id="mdPreview"></pre></section>
+            <section class="export-panel" data-export-panel="rolecard"><div class="export-head"><div><h3>角色卡 V2 JSON</h3><p>回答“AI 伴侣是谁、怎么说话”。适合 SillyTavern 和兼容酒馆角色卡的平台；没有可靠开场对白时保持为空，不替角色编造口吻。</p></div><div><button class="button quiet" type="button" data-copy-target="roleCardPreview">复制</button><button class="button primary small" type="button" data-portable-download="character">下载角色卡</button></div></div><pre id="roleCardPreview"></pre></section>
+            <section class="export-panel" data-export-panel="memory"><div class="export-head"><div><h3>星迹记忆库 JSON</h3><p>回答“你们发生过什么、现在如何相处”。带入已采用的内容及其适用范围，不包含原始聊天文件、截图或未采用线索。</p></div><div><button class="button quiet" type="button" data-copy-target="memoryLibraryPreview">复制</button><button class="button primary small" type="button" data-portable-download="memory">下载记忆库</button></div></div><pre id="memoryLibraryPreview"></pre></section>
+            <section class="export-panel" data-export-panel="structured"><div class="export-head"><div><h3>星迹项目备份 JSON</h3><p>只用于以后回到星迹继续编辑，包含已纳入、暂未纳入和用户修改过的核对结构；不要把它当成角色卡导入其他平台。</p></div><button class="button primary small" id="downloadJson" type="button">下载星迹备份</button></div><pre id="jsonPreview"></pre></section>
+            <section class="export-panel" data-export-panel="review">
+              <div class="export-head review-simple-head">
+                <div><h3>可选：把修订页发给用户</h3><p>先导出使用；用户想补充背景或纠正某处时，再发送这个页面。它不是交付前的必答问卷，填写与回传合并不调用 AI。</p></div>
+                <button class="button primary small" id="downloadSingleReviewPage" type="button">下载可选修订页</button>
+              </div>
+              <label class="review-alias"><span><strong>核对对象代号（建议填写）</strong><small>例如 P001，方便回传时对应用户；不要填手机号或真实姓名。</small></span><input id="reviewParticipantAlias" type="text" maxlength="100" placeholder="例如：P001"></label>
+              <section class="review-recovery" aria-label="核对范围">
+                <label for="reviewScope"><strong>本次修订范围</strong></label>
+                <select id="reviewScope"><option value="supplemental">按需补充：关键背景与候选内容</option><option value="normal">完整概况复核（可选）</option></select>
+                <div id="reviewCandidatePanel" hidden>
+                  <p>从本轮最多 12 条候选中挑出至多 5 个会影响理解的关键背景问题，优先点选、允许不确定；没有合适背景问题时保留逐项核对。具体内容的纠错与确认可展开处理，补充一组背景不等于确认整组事实。未选中的候选继续留存。</p>
+                  <div class="review-recovery-actions"><button class="button quiet small" id="selectNextCandidates" type="button">选择尚未核对的 12 条</button><button class="button quiet small" id="clearReviewCandidates" type="button">清空选择</button><button class="button quiet small" id="repairCandidateEvidence" type="button">重新定位完整原文（不调用 AI）</button></div>
+                  <p id="reviewSelectionCount" role="status" aria-live="polite"></p>
+                  <div id="reviewCandidateList"></div>
+                  <p>问卷中的“还有重要内容没问到？”收纳关系、态度、语气和遗漏经历，也会提示材料中的未解问题。知道多少补多少，不是必填。明确补充本地纳入，普通备注只留存。</p>
+                </div>
+                <button class="button quiet small" id="downloadReviewBackup" type="button">保存本轮配套项目备份</button>
+                <p>先下载给用户的核对页，再保存配套备份。重新发出补充页后只接收最新一轮，旧回包不会覆盖新内容。</p>
+              </section>
+              <div class="review-export-steps simplified"><span><b>1</b>下载一个核对页发给用户</span><span><b>2</b>用户填写后发回完整结果</span><span><b>3</b>你在下方选择文件或粘贴并合并</span></div>
+
+              <section class="review-return" aria-labelledby="reviewReturnTitle">
+                <div class="review-return-head"><div><small>用户已经发回结果？</small><h4 id="reviewReturnTitle">导入并核对修改内容</h4><p>先预览用户改了什么，确认属于当前档案后再合并；不会静默覆盖错档案。</p></div><div><label class="button quiet">选择回传 JSON / TXT<input id="reviewResponseFile" type="file" accept=".json,.txt,application/json,text/plain" hidden></label><button class="button text-danger small" id="undoReviewResponse" type="button" hidden>撤销上次合并</button></div></div>
+                <details class="review-legacy-tools">
+                  <summary>用户发回的是文字？粘贴完整核对结果</summary>
+                  <p>粘贴用户通过“复制完整结果”发回的全部 JSON，不要粘贴核对摘要。文件与粘贴内容均限 256 KB。</p>
+                  <label class="field-note" for="reviewResponsePaste">完整核对结果 JSON</label>
+                  <textarea id="reviewResponsePaste" rows="6" spellcheck="false" placeholder="在这里粘贴完整核对结果 JSON"></textarea>
+                  <div><button class="button quiet" id="importReviewResponsePaste" type="button">校验粘贴结果</button></div>
+                </details>
+                <p class="review-response-status" id="reviewResponseStatus" role="status" aria-live="polite">请选择用户发回的 JSON / TXT 文件，或粘贴完整核对结果。</p>
+                <div class="review-merge-preview" id="reviewMergePreview" hidden>
+                  <div class="review-merge-summary"><div id="reviewMergeIdentity"></div><div class="review-merge-counts" id="reviewMergeCounts"></div></div>
+                  <div class="review-merge-changes" id="reviewMergeChanges"></div>
+                  <p class="review-merge-status" id="reviewMergeStatus"></p>
+                  <div class="review-merge-actions"><button class="button quiet" id="cancelReviewResponse" type="button">先不合并</button><button class="button primary" id="applyReviewResponse" type="button">合并核对结果</button></div>
+                </div>
+              </section>
+
+              <div class="review-mode-grid"><article><small>可选 · 单文件离线修订</small><strong>用户只收一个文件</strong><p>适合当前小规模测试。部分手机聊天软件可能不直接运行 HTML，需要用户选择“用浏览器打开”。</p></article><article><small>后续 · 一次提交链接</small><strong>手机更顺手，结果集中保存</strong><p>在线核对站仍需单独部署数据库和核对 API；它同样不连接内部 AI。</p></article></div>
+              <details class="review-legacy-tools"><summary>兼容方式：分别发送网页和脱敏核对包</summary><div><a class="button quiet" href="participant-review/review.html" target="_blank" rel="noopener">打开通用核对页</a><button class="button quiet" id="downloadReviewPacket" type="button">下载脱敏核对包 JSON</button></div><p>只在单文件无法打开时使用。用户需要先打开网页，再选择核对包。</p><pre id="reviewPacketPreview"></pre></details>
+              <div class="review-export-note"><strong>安全边界</strong><p>修订页不包含原始聊天、截图、AI 地址或密钥，但档案内容仍可能含私密信息，只发给对应本人。页面填写和回传合并不调用 AI；未回答的项目不视为已经确认。</p></div>
+            </section>
+            <section class="export-panel" data-export-panel="prompt"><div class="export-head"><div><h3>重新对齐提示词</h3><p>把核心和重要记忆带到目标平台后，先让对方复述并核对。</p></div><button class="button quiet" type="button" data-copy-target="promptPreview">复制</button></div><pre id="promptPreview"></pre></section>
+            <section class="export-panel" data-export-panel="platform"><div class="export-head"><div><h3>选平台，看该下载什么、放在哪里</h3><p>入口和字段各不相同。星迹只把已经核实的接入方式标成可导入；未验证的部分会明确让你手动填写。</p></div><div><button class="button quiet" type="button" data-copy-target="platformPreview">复制</button><button class="button primary small" id="downloadPlatform" type="button">下载本页教程</button></div></div><div class="platform-picker" id="platformPicker" role="tablist" aria-label="目标平台"><button class="active" type="button" data-platform-target="chatgpt" aria-selected="true">ChatGPT</button><button type="button" data-platform-target="deepseek" aria-selected="false">DeepSeek</button><button type="button" data-platform-target="gemini" aria-selected="false">Gemini / Google</button><button type="button" data-platform-target="sillytavern" aria-selected="false">SillyTavern</button><button type="button" data-platform-target="xiaoshouji" aria-selected="false">小手机 App</button><button type="button" data-platform-target="polaris" aria-selected="false">Polaris 北极星</button><button type="button" data-platform-target="operit" aria-selected="false">Operit</button><button type="button" data-platform-target="zhumengdao" aria-selected="false">筑梦岛</button><button type="button" data-platform-target="shine" aria-selected="false">Shine</button></div><div class="platform-guide" id="platformGuide"></div><pre id="platformPreview"></pre></section>
+            <section class="export-panel" data-export-panel="test"><div class="export-head"><div><h3>实际复测清单</h3><p>星迹不替目标平台保证长期记忆，请用真实对话验证。</p></div><button class="button primary small" id="downloadTest" type="button">下载测试记录</button></div><div id="testGrid" class="test-grid"></div><label class="test-notes">复测备注<textarea id="testNotes" rows="5" placeholder="记录哪些内容调用正确、哪里遗漏或混淆……"></textarea></label></section>
+          </div></div>
+          <div class="capability-boundary"><strong>能力边界</strong><p>导出的资料可以帮助模型重新理解你们的关系，但不能保证任何平台永久记忆，也不能完整复刻或延续原来的 AI 身份。</p></div>
+          <div class="panel-footer"><button class="button link" type="button" data-go-stage="3">← 返回星图</button><button class="button quiet" id="restart" type="button">开始一份新档案</button></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="siteFooter"><div class="page-width"><img src="assets/brand/memorbit-approved.png?v=20260826-1" alt="星迹 Memorbit"><p>把熟悉的关系、相处方式和记忆依据一起带走。</p><span>3.3.7-beta B08 · 长文持续整理与按需并行 · 18+</span></div></footer>
+  <dialog id="archiveEditDialog" class="app-dialog archive-edit-dialog" aria-labelledby="archiveEditDialogTitle" aria-describedby="archiveEditHelp">
+    <form id="archiveEditForm" method="dialog">
+      <button id="archiveEditClose" class="dialog-close" type="button" aria-label="取消并关闭修订">×</button>
+      <p class="eyebrow">定点修订 · 不调用 AI</p><h2 id="archiveEditDialogTitle">修改这一条记忆</h2><p id="archiveEditHelp">只修改你明确知道的部分。正文直接保存，不由 AI 改写；原文依据仍保留，未提供的背景不必补齐。</p>
+      <input id="archiveEditId" type="hidden">
+      <label class="archive-edit-field" for="archiveEditTitle">条目标题<input id="archiveEditTitle" type="text" maxlength="200" required></label>
+      <label class="archive-edit-field" for="archiveEditText">准确内容<textarea id="archiveEditText" rows="5" maxlength="12000" required></textarea></label>
+      <details class="archive-edit-scope"><summary>人物、场景与适用范围 <span>按需修改</span></summary><p>一次表现不等于长期性格；未来期待不等于已经发生。这里的背景只作用于当前条目。</p><div class="archive-edit-grid">
+        <label for="archiveEditSubject">归属范围<select id="archiveEditSubject"><option value="unknown">未知</option><option value="user">关于用户</option><option value="companion">关于 AI 伴侣</option><option value="both">关于双方</option></select></label>
+        <label for="archiveEditActor">主要归属人物<select id="archiveEditActor"><option value="">未知 / 未指定</option></select></label>
+        <label for="archiveEditSpeaker">谁在说话<select id="archiveEditSpeaker"><option value="">未知 / 未指定</option></select></label>
+        <label for="archiveEditRecipient">对谁说<select id="archiveEditRecipient"><option value="">未知 / 未指定</option></select></label>
+        <label for="archiveEditScene">当时场景<input id="archiveEditScene" type="text" maxlength="200" placeholder="例如：公开会议、私下聊天"></label>
+        <label for="archiveEditStage">关系或剧情阶段<input id="archiveEditStage" type="text" maxlength="200" placeholder="例如：初识时；未知可留空"></label>
+        <label for="archiveEditWorld">所属故事或世界<input id="archiveEditWorld" type="text" maxlength="120" placeholder="不把剧情当成现实经历"></label>
+        <label for="archiveEditBasis">内容性质<select id="archiveEditBasis"><option value="unknown">暂不确定</option><option value="fact">素材所述事实</option><option value="roleplay">角色设定 / 剧情</option><option value="one_off">一次对话 / 表现</option><option value="expectation">未来期待</option></select></label>
+      </div></details>
+      <p id="archiveEditStatus" class="archive-edit-status" role="status" aria-live="polite">保存后请查看更新结果；外部平台需要重新导入，不会自动同步。</p>
+      <div class="dialog-actions"><button class="button quiet" id="archiveEditCancel" type="button">取消</button><button class="button primary" id="archiveEditSave" type="submit">保存修订</button></div>
+    </form>
+  </dialog>
+  <dialog id="consentDialog" class="app-dialog"><form method="dialog"><button class="dialog-close" value="cancel" aria-label="关闭">×</button><p class="eyebrow">开始之前</p><h2>你的材料，应当始终由你掌控</h2><ul><li>在你点击“整理记忆线索”后，所选文字、截图，以及从 Word 提取出的正文和内嵌图片会发送给千问模型接口处理；原始 `.docx` 文件不会上传。后续 AI 补充也会使用相关材料。</li><li>请先删除姓名、账号、住址等不希望提交的敏感信息；“AI 会忽略无关内容”不能代替上传前脱敏。</li><li>星迹当前不提供账号云端档案库。本机草稿可能因浏览器清理、容量或隐私模式而丢失，请查看保存状态并主动下载项目备份；原文件和截图请另存。</li><li>请只使用你有权处理的材料；AI 会主动完成整理，你可以按需修订，不要求先答问卷。</li></ul><label class="consent-check"><input id="adultConsent" type="checkbox"><span>我已满 18 岁，同意提交已脱敏的材料用于本次 AI 整理，并理解以上说明。</span></label><div class="dialog-actions"><button class="button quiet" value="cancel">暂不开始</button><button class="button primary" id="confirmConsent" value="default" disabled>我知道了，开始整理</button></div></form></dialog>
+  <dialog id="loginDialog" class="app-dialog compact-dialog"><form method="dialog"><button class="dialog-close" value="cancel" aria-label="关闭">×</button><p class="eyebrow">LOCAL PREVIEW</p><h2>当前测试版无需登录</h2><p>本机草稿不等于账号云端保存，请以保存状态为准。完成后请主动下载项目备份，并另外保存原文件与截图；未来启用账户能力时，会另行说明保存范围。</p><div class="dialog-actions"><button class="button primary" value="default">明白了</button></div></form></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="vendor/mammoth.browser.min.js?v=1.12.2"></script>
+  <script src="participant-review/single-file-builder.js?v=20260915-archive-b06"></script>
+  <script src="context-memory.js?v=20260915-archive-b06"></script>
+  <script src="archive-model.js?v=20260915-efficient-b08"></script>
+  <script src="large-text.js?v=20260915-efficient-b08"></script>
+  <script src="config.js"></script>
+  <script src="app.js?v=20260915-efficient-b08"></script>
+</body>
+</html>

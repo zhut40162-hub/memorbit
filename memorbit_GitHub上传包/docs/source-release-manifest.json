@@ -1,0 +1,88 @@
+{
+  "version": "3.3.7-beta-B08",
+  "status": "verified-upload-package-not-deployed",
+  "cloudDeploymentChanged": false,
+  "backendIncluded": false,
+  "syntheticQaFixturesIncluded": false,
+  "syntheticDataScope": "built-in anonymous demo only; no QA fixtures or private materials",
+  "userMaterialsIncluded": false,
+  "credentialsIncluded": false,
+  "createdAt": "2026-09-15T08:03:02.7678970Z",
+  "verificationSummarySha256": "29108e7d0460c566917a8c427594286342d1d8ee0015a9f843095d627c086717",
+  "checks": [
+    {
+      "suite": "qa-unit-run-result.json",
+      "status": "passed",
+      "count": 127,
+      "resultSha256": "556d934e75ea64a475db647ee178a0b90ff626d238b66f09570c85da12669265"
+    },
+    {
+      "suite": "qa-b06-browser-result.json",
+      "status": "passed",
+      "count": 16,
+      "resultSha256": "573577ad63d2f2922f80185f97a9d2e368abbcb2ddee9b0c452289ec5c57b34d"
+    },
+    {
+      "suite": "qa-b08-browser-all-result.json",
+      "status": "passed",
+      "count": 39,
+      "resultSha256": "00c2c36a78d073d9051eeb537648b49a403ac8cabd1d96fb04163f0efdfc22bf"
+    },
+    {
+      "suite": "qa-b08-browser-real-local-result.json",
+      "status": "passed",
+      "count": 2,
+      "resultSha256": "d01ccefe25a164ed05af8ccf648240143e2cc301fd6c8b818339ae3498918152"
+    },
+    {
+      "suite": "qa-b08-restore-atomic-result.json",
+      "status": "passed",
+      "count": 12,
+      "resultSha256": "03287e90ac48f5be13948325edee0eeefb9cfc8f8f8b4843be161bbf89874fcc"
+    },
+    {
+      "suite": "qa-b08-efficiency-helper-result.json",
+      "status": "passed",
+      "count": 30,
+      "resultSha256": "eb48c41a5fad8afe5816c22bb5fd66db97f98b43ba3a668292bd436506a7c179"
+    }
+  ],
+  "limits": {
+    "textFileBytes": 12582912,
+    "normalizedTextCharacters": 67108864,
+    "maxChunks": 15000,
+    "maxEntries": 100000,
+    "backupBytes": 268435456
+  },
+  "compatibility": {
+    "indexedDbName": "memorbit-large-text-b07",
+    "storeName": "records",
+    "existingTaskKeysPreserved": true,
+    "oldTaskSegmentationAndPromptPreserved": true,
+    "restoreDoesNotCallModel": true
+  },
+  "processingDefaults": {
+    "requestBudget": "all",
+    "concurrency": 2,
+    "newTaskChunkCharacters": 6400,
+    "explicitPaidConsentRequired": true
+  },
+  "largeTextModelQuality": "not-validated-end-to-end-on-10MiB-real-model",
+  "verificationBoundary": "Offline mocked extraction and local-file import checks do not establish real-model full-document quality, actual cost savings or deployed performance.",
+  "files": {
+    "index.html": "104f0940a64c57f5f491991365a051ce810a38cc82e8fad1635662e4fb50ccd5",
+    "app.js": "b19c2468ecf3ab41a987450d6e510c958af602479d1aa5f2bc4631157cf894aa",
+    "archive-model.js": "b4ba23451b9991f07632e88c067a3a137ac740d55b69a0f031bb7de45febbd30",
+    "context-memory.js": "d9285d4400216ca263fed8010311099a1b7dfbe837569fa3e64dd97c2ab2bc3f",
+    "large-text.js": "ce4f3e9beefa902650fb174add0bb993cee6d10e1d4ce548e4261718bc6fa60c",
+    "styles.css": "22501f53e796076b4620e0642a0564dbf0f942f15307600b29fa188c78cc984d",
+    "assets/corner-flourish.svg": "95c5d84dd7391af81a62c16324a543501935231ff746be45a1bd8589fb9ffe30",
+    "assets/brand/memorbit-approved.png": "16cc7347d3d934fca2381b679b58406b15a5df42406a7eb8e51b7b8b5f2093ba",
+    "participant-review/review.html": "adca7b39c6acb1e7811182b613f8972254213e535160e1f1bfd21aa84f002de9",
+    "participant-review/review.js": "6f38fe79ea3f327735ddd1aa331395557863777a4443abb5d0e22777e6d16db6",
+    "participant-review/review.css": "2cc580a73944ad8899ecf78cb6a1d73690688e8c0174c676c7aaea65542eb644",
+    "participant-review/single-file-builder.js": "1e7e363577cabba739bef70218d0e6813aa232c4f31db8ac55c53e34fa0ba7c9",
+    "vendor/mammoth.browser.min.js": "e660d427ddb9aaf51cf4ca237512d0776141a58f0dfb0fd58b576721e8195e2b",
+    "vendor/LICENSE": "6663bbd049205d38a496ccacb412a151980b444627d38de218b3b809aef330f1"
+  }
+}

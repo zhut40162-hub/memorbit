@@ -1,0 +1,12 @@
+{
+  "name": "memorbit-portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local preview helper for a portfolio deployment snapshot",
+  "scripts": {
+    "start": "node scripts/serve.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <title>星迹 · 参与者本地核对</title>
+  <link rel="stylesheet" href="review.css?v=20260914-context-b05">
+  <script src="review.js?v=20260914-context-b05" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <p class="eyebrow">PARTICIPANT REVIEW · LOCAL ONLY</p>
+      <h1>核对已经整理好的结果</h1>
+      <p class="lede">这个页面不会调用 AI，也不会上传文件。所有选择只在你的浏览器里处理。</p>
+    </header>
+
+    <section class="notice" aria-labelledby="boundaryTitle">
+      <div>
+        <h2 id="boundaryTitle">只核对结果，不上传聊天</h2>
+        <p id="boundaryText">页面只读取少量核心档案结果，不含原聊天或图片，但仍可能出现双方称呼和重要关系事实。请仅由对应本人核对，完成后把结果小文件发回工作人员。</p>
+      </div>
+      <span class="offline-badge">不联网 · 不调用 AI</span>
+    </section>
+
+    <section class="panel" id="loadPanel" aria-labelledby="loadTitle">
+      <div class="panel-heading">
+        <div>
+          <p class="step">步骤 1</p>
+          <h2 id="loadTitle">选择精简核对包</h2>
+        </div>
+        <button id="clearReview" class="button secondary" type="button" hidden>清除当前内容</button>
+      </div>
+      <label class="file-picker">
+        <span>选择 review-packet.json</span>
+        <input id="packetFile" type="file" accept=".json,application/json">
+      </label>
+      <p class="hint">仅接受不超过 2 MB 的 JSON。请不要选择原始聊天导出、截图、Word 或完整星迹项目备份。</p>
+      <p id="loadStatus" class="status" role="status" aria-live="polite">尚未选择文件。</p>
+      <dl id="packetMeta" class="packet-meta" hidden>
+        <div><dt>核对编号</dt><dd id="metaReviewId"></dd></div>
+        <div><dt>参与者代号</dt><dd id="metaAlias"></dd></div>
+        <div><dt>版本</dt><dd id="metaVersion"></dd></div>
+        <div><dt>有效期提示</dt><dd id="metaExpiry"></dd></div>
+      </dl>
+    </section>
+
+    <form id="reviewForm" novalidate hidden>
+      <section id="contextPanel" class="panel" aria-labelledby="contextTitle" hidden>
+        <div class="panel-heading">
+          <div>
+            <p class="step">补充关键背景</p>
+            <h2 id="contextTitle">点选几个答案，不用逐条重写</h2>
+            <p>相关内容合起来看；拿不准可以选“不确定”，都不符合也可直接继续。没有默认答案，补充文字不必填。</p>
+          </div>
+          <p id="contextProgress" class="progress-pill" aria-live="polite">0 / 0 已补充</p>
+        </div>
+        <p class="pending-notice">背景回答不等于事实确认。选择重要、阶段或适用范围，不会把待核实内容自动变成事实，也不会把一次经历变成永久性格。</p>
+        <div id="contextQuestions" class="context-questions"></div>
+      </section>
+      <section class="panel" aria-labelledby="reviewTitle">
+        <details id="factReviewDisclosure" open>
+        <summary id="factReviewSummary" hidden>需要确认或纠正单条内容？（可选，展开处理）</summary>
+        <div class="panel-heading">
+          <div>
+            <p class="step" id="reviewStepLabel">步骤 2</p>
+            <h2 id="reviewTitle">逐项核对</h2>
+            <p id="reviewInstructions">每项选择“准确 / 需改 / 不确定”。选择“需改”后必须填写修订内容。</p>
+          </div>
+          <div class="review-progress-actions"><button id="markRemainingAccurate" class="button secondary compact" type="button">其余全部准确</button><p id="reviewProgress" class="progress-pill">0 / 0 已判断</p></div>
+        </div>
+        <div id="focusedReviewActions" class="actions" hidden>
+          <button id="nextUnanswered" class="button secondary compact" type="button">下一未完成项</button>
+          <button id="collapseAnswered" class="button secondary compact" type="button">收起已完成项</button>
+          <p class="hint">只有你点击继续时才调整顺序；每项答案都会保留，已完成项可展开修改。</p>
+        </div>
+        <div id="reviewItems" class="review-items"></div>
+        </details>
+      </section>
+
+      <section id="supplementsPanel" class="panel" aria-labelledby="supplementsTitle" hidden>
+        <details id="supplementsDisclosure">
+        <summary id="supplementsTitle">还有重要内容没问到？（可选）</summary>
+        <p class="hint">只写你本人认可、愿意纳入档案的内容；每栏最多 2000 字。空白不作结论，不知道就留空。请概括说明，不要粘贴原始聊天。</p>
+        <aside id="clarificationHintsPanel" class="suggested-gaps" hidden>
+          <strong>材料中还没说明的地方（知道多少补多少，可留空）</strong>
+          <ul id="clarificationHintList"></ul>
+          <p class="hint">这些只是可选提示，不是已核实的结论，也不是必答项。愿意补充时，请在下方对应栏写出你本人认可的完整陈述。</p>
+        </aside>
+        <div class="supplement-fields">
+          <label class="overall-note"><span>关系定位与变化</span><textarea id="supplement-relationship" data-supplement="relationship" maxlength="2000" rows="3" placeholder="你怎样理解这段关系？是否有你认可的重要变化？"></textarea></label>
+          <label class="overall-note"><span>伴侣对我的表达态度</span><textarea id="supplement-attitude" data-supplement="attitude" maxlength="2000" rows="3" placeholder="例如对方如何表达关心、回应你的需要；只写你认可的描述。"></textarea></label>
+          <label class="overall-note"><span>AI 伴侣的语气与交流习惯</span><textarea id="supplement-tone" data-supplement="tone" maxlength="2000" rows="3" placeholder="AI 伴侣对你说话时，有哪些你希望保留的称呼、表达方式或日常交流习惯？只写你认可的表现，不确定的不要推断。"></textarea></label>
+          <label class="overall-note"><span>遗漏的重要经历</span><textarea id="supplement-memory" data-supplement="memory" maxlength="2000" rows="3" placeholder="还有哪段重要经历没有收录？可简述发生了什么、为什么重要。"></textarea></label>
+        </div>
+        </details>
+      </section>
+
+      <section class="panel" aria-labelledby="consentTitle">
+        <p class="step" id="finishStepLabel">步骤 3</p>
+        <h2 id="consentTitle">确认说明并生成提交文件</h2>
+        <div id="studyConsent" class="study-consent" hidden>
+          <strong>研究方提供的补充说明（仅作文本展示）</strong>
+          <p id="studyConsentText"></p>
+        </div>
+        <label class="consent-check">
+          <input id="consentAccepted" type="checkbox">
+          <span>我已了解：这份页面不会上传内容；填写会尽力保存在当前设备的浏览器中，完成后仍需要由我主动把完整结果发回给工作人员。</span>
+        </label>
+        <div id="suggestedGaps" class="suggested-gaps" hidden>
+          <strong>AI 最拿不准的两点（知道就补，不知道可跳过）</strong>
+          <ul id="suggestedGapList"></ul>
+        </div>
+        <label class="overall-note">
+          <span>整体补充（可选）</span>
+          <textarea id="overallNote" maxlength="2000" rows="4" placeholder="可回答上面的缺口，或补充真正影响关系与重要记忆的遗漏；不知道就留空。"></textarea>
+        </label>
+        <p id="draftStatus" class="status" role="status" aria-live="polite">填写内容会自动保存在这台设备的当前浏览器中。</p>
+        <p id="validationStatus" class="status" role="status" aria-live="polite">请完成全部判断并接受说明。</p>
+        <div class="actions">
+          <button id="downloadResponse" class="button primary" type="submit" disabled>发送或保存核对结果</button>
+          <button id="copySummary" class="button secondary" type="button" disabled>查看/复制简短摘要（不可导入）</button>
+        </div>
+        <section id="responseFallback" class="response-fallback" aria-labelledby="responseFallbackTitle" hidden>
+          <div>
+            <strong id="responseFallbackTitle">结果已经生成，不会因下载失败而丢失</strong>
+            <p id="responseFallbackHelp">若下方有系统分享按钮可优先使用；否则复制完整结果发回，工作人员可以直接粘贴导入。</p>
+          </div>
+          <div class="fallback-actions">
+            <button id="shareResponse" class="button primary" type="button">打开系统分享</button>
+            <button id="copyFullResponse" class="button primary" type="button">复制完整结果</button>
+            <button id="downloadResponseText" class="button secondary" type="button">下载手机兼容版 TXT</button>
+            <button id="retryResponseDownload" class="button secondary" type="button">再次下载 JSON</button>
+            <button id="clearSavedDraft" class="button secondary" type="button">清除本机草稿</button>
+          </div>
+          <label class="response-json">
+            <span>完整结果 JSON（可长按全选复制）</span>
+            <textarea id="responseJsonPreview" rows="8" readonly spellcheck="false"></textarea>
+          </label>
+        </section>
+        <div id="summaryBox" class="summary-box" hidden>
+          <strong>仅供查看的摘要（工作人员无法用它合并，请仍发送完整结果、JSON 或 TXT）</strong>
+          <pre id="summaryPreview"></pre>
+        </div>
+      </section>
+    </form>
+
+    <footer>
+      <p>填写内容会尽力自动保存在当前设备，重新打开同一份页面时可恢复 30 天内草稿；仍建议离开前完成系统分享，或复制完整结果留存。</p>
+    </footer>
+  </main>
+</body>
+</html>
